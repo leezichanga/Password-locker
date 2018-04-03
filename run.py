@@ -61,10 +61,6 @@ def display_accounts():
 
 def main():
     print("****************Welcome to Password Locker*************")
-    print('''Do you ever want to easily access your passwords
-without having to memorize??
-        Well here is a chance to save all your passwords in a
-        single location''')
     print("\n")
     print("Enter your name: ")
     username = input()
@@ -72,7 +68,7 @@ without having to memorize??
     print(f"Hello {username}.\nEnter a password or automatically generate password by system?")
     print('''
         Press:
-                    g- generate new password
+                    g- automatically generate new password
                     c- create your own password
           ''')
     pwd_click = input()
@@ -107,11 +103,11 @@ without having to memorize??
     if (name == username and pwd == pwdinput):
         print('\n')
         while True:
-            print('''Use the following short codes:
-                  c - create new account to save
-                  d - display accounts saved
-                  f - find saved account
-                  ex - exit
+            print('''Use these short codes:
+                  c - create new account
+                  d - display accounts 
+                  f - find accounts
+                  ex - exit accounts
                   ''')
             short_code = input().lower()
             if short_code == 'c':
@@ -143,7 +139,7 @@ without having to memorize??
                     print('\n')
 
             elif short_code == 'f':
-                print("Enter the name of the account you want to search for: ")
+                print("Enter name of the account you are searching for: ")
                 search_account_name = input()
                 if check_existing_account(search_account_name):
                     search_account = find_account(search_account_name)
@@ -156,14 +152,14 @@ without having to memorize??
                     print("Account does not exist")
 
             elif short_code == 'ex':
-                print("Thanks")
+                print("Thanks......")
                 break
             else:
-                print("Sorry wrong code! Please use the short codes")
+                print("Sorry wrong input! Please use the short codes")
 
     else:
         print('''Incorrect Name or Password
-Run the application again''')
+Run application again''')
 
 if __name__ == '__main__':
     main()
