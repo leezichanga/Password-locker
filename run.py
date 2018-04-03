@@ -105,7 +105,7 @@ def main():
         while True:
             print('''Use these short codes:
                   c - create new account
-                  d - display accounts 
+                  d - display accounts
                   f - find accounts
                   ex - exit accounts
                   ''')
@@ -152,7 +152,7 @@ def main():
                     print("Account does not exist")
 
             elif short_code == 'ex':
-                print("Thanks......")
+                print("Thanks")
                 break
             else:
                 print("Sorry wrong input! Please use the short codes")
