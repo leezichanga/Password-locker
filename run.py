@@ -135,7 +135,7 @@ def main():
                         print('\n')
                 else:
                     print('\n')
-                    print("You dont have any saved acccounts")
+                    print("Sorry...You dont have any saved acccounts")
                     print('\n')
 
             elif short_code == 'f':
@@ -157,9 +157,6 @@ def main():
             else:
                 print("Sorry wrong input! Please use the short codes")
 
-    else:
-        print('''Incorrect Name or Password
-Run application again''')
 
 if __name__ == '__main__':
     main()
