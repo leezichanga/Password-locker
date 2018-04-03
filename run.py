@@ -60,7 +60,7 @@ def display_accounts():
 
 
 def main():
-    print("--------------------Password Locker-------------------")
+    print("****************Welcome to Password Locker*************")
     print('''Do you ever want to easily access your passwords
 without having to memorize??
         Well here is a chance to save all your passwords in a
@@ -69,7 +69,7 @@ without having to memorize??
     print("Enter your name: ")
     username = input()
     print("*"*78)
-    print(f"Hello {username}.\nDo you want to enter a password or we automatically generate for you?")
+    print(f"Hello {username}.\nEnter a password or automatically generate password by system?")
     print('''
         Press:
                     g- generate new password
@@ -77,7 +77,7 @@ without having to memorize??
           ''')
     pwd_click = input()
     if (pwd_click  == 'g'):
-        chars = '1234567890abcdefghijklmnop?/@-' #characters to choose from
+        chars = 'abcdefGHIJKlmn1256784903-@!&#.' #characters to choose from
         length = int(input("Enter the length of password you want: "))
         pwdinput = ''
         for c in range(length):
@@ -86,7 +86,7 @@ without having to memorize??
         print(f"{username} your password is {pwdinput}")
 
     elif (pwd_click == 'c'):
-        print("enter your password: ")
+        print("Input password: ")
         pwdinput = input()
         print(f"{username} your password is {pwdinput}")
 
@@ -100,7 +100,7 @@ without having to memorize??
 
     print("To continue reenter your details")
     print("*"*78)
-    print("Enter your username again: ")
+    print("Enter your username : ")
     name = input()
     print("Enter your password: ")
     pwd = input()
@@ -115,7 +115,7 @@ without having to memorize??
                   ''')
             short_code = input().lower()
             if short_code == 'c':
-                print("---------------------New account--------------------")
+                print("*************Create new account***********")
                 print("-"*80)
                 print("Account Name: ")
                 account_name = input()
@@ -132,14 +132,14 @@ without having to memorize??
 
             elif short_code == 'd':
                 if display_accounts():
-                    print("Here is a list of all your accounts: ")
+                    print("Here are your accounts: ")
                     print('\n')
                     for account in display_accounts():
                         print(f"{account.account_name}  {account.user_name}  {account.password}")
                         print('\n')
                 else:
                     print('\n')
-                    print("You dont have any saved acccounts yet")
+                    print("You dont have any saved acccounts")
                     print('\n')
 
             elif short_code == 'f':
@@ -156,10 +156,10 @@ without having to memorize??
                     print("Account does not exist")
 
             elif short_code == 'ex':
-                print("Thanks for your time! Bye!")
+                print("Thanks")
                 break
             else:
-                print("Sorry didnt get that! Please use the short codes")
+                print("Sorry wrong code! Please use the short codes")
 
     else:
         print('''Incorrect Name or Password
